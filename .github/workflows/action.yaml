@@ -1,4 +1,4 @@
-name: Build, Upload and deploy to AWS Lambda functions
+name: Build, Upload and deploy to AWS Lambda function
 on: 
  push:
    branches:
@@ -71,7 +71,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: Test
+    needs: upload
     steps:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
